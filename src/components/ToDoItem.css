@@ -1,0 +1,82 @@
+:root {
+   --border-radius: 0.75rem;
+   --button-size: 3rem;
+}
+
+.tasks {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
+   border-radius: var(--border-radius);
+   background-color: white;
+   font-size: 1rem;
+   font-weight: 600;
+   letter-spacing: 0.03rem;
+   animation: fadeIn 0.5s linear;
+   margin-bottom: 5px;
+   position: relative;
+   border-right: 0px solid lightgray;
+   letter-spacing: -0.015rem;
+   will-change: transform;
+   transition: all 0.3s ease-in-out;
+   animation: fadeIn 0.5s linear;
+   overflow: hidden;
+}
+
+.tasks:hover > .ToDoItem-Delete {
+   background: #f74a4a;
+   transform: translateX(0px);
+}
+
+.ToDoItem-Text {
+   width: 90%;
+   text-align: left;
+   padding-left: 20px;
+}
+
+.ToDoItem-Delete {
+   width: 60px;
+   height: 60px;
+   transform: translateX(120px);
+   /*padding: 5px;*/
+   cursor: pointer;
+   border-bottom-right-radius: 10px;
+   border-top-right-radius: 10px;
+   color: white;
+   font-size: 18px;
+   transition: all 0.3s ease-in-out;
+}
+
+.ToDoItem-Delete:hover {
+   box-shadow: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      margin-top: -50px;
+   }
+   50% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+      margin-top: 0px;
+   }
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 1;
+      margin-top: 0px;
+   }
+   50% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 0;
+      margin-top: -50px;
+   }
+}
